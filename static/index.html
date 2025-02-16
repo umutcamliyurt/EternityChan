@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EternityChan</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <script src="/static/purify.min.js" defer></script>
+</head>
+<body>
+    <h1>EternityChan</h1>
+    <div id="container">
+        <input type="text" id="user" placeholder="Your name (default: Anonymous)">
+        <textarea id="content" placeholder="Write something..."></textarea>
+
+        <!-- Hidden file input and custom button -->
+        <input type="file" id="media" style="display: none;" onchange="updateMediaLabel()">
+        <button type="button" id="selectMediaBtn" onclick="document.getElementById('media').click()">Select Media</button>
+
+        <button onclick="createPost()">Post</button>
+
+        <!-- Labels for Donate, Source Code, Report Abuse, Terms of Service, and Privacy Policy -->
+        <div id="labels">
+            <a href="https://github.com/umutcamliyurt/EternityChan=readme-ov-file#donate-to-support-development-of-this-project" target="_blank">
+                <label class="label">Donate ❤️</label>
+            </a>
+            <a href="https://github.com/umutcamliyurt/EternityChan" target="_blank">
+                <label class="label">Source Code</label>
+            </a>
+            <a href="mailto:nemesisuks@protonmail.com" target="_blank">
+                <label class="label">Report Abuse</label>
+            </a>
+            <a href="/static/terms-of-service.html" target="_blank">
+                <label class="label">Terms of Service</label>
+            </a>
+            <a href="/static/privacy-policy.html" target="_blank">
+                <label class="label">Privacy Policy</label>
+            </a>
+        </div>
+
+    </div>
+    <div id="posts"></div>
+
+    <!-- Modal for Image -->
+    <div id="myModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <div class="modal-content">
+            <img id="modalImage" src="" alt="Expanded Image">
+        </div>
+    </div>
+    <script src="/static/main.js"></script>
+</body>
+</html>

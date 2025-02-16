@@ -1,0 +1,8 @@
+[default]
+address = "127.0.0.1"
+port = 8000
+
+[default.limits]
+forms = "100 MiB"
+json = "100 MiB"
+file = "100 MiB"
